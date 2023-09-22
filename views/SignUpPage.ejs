@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="SignUpPage.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="form2-container" id="signup-form" >
+            <h1>Sign Up</h1>
+            <form method="POST">
+              <label for="name">Full Name</label>
+              <input type="text" id="new-name" name="name" required>
+  
+              <label for="age">Age</label>
+              <input type="number" id="new-age" name="age" min="11" max="18" required>
+  
+              <label for="gender">Gender</label>
+                      <select id="gender" name="gender" required>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          <option value="Others">Others</option>
+                      </select>
+  
+              <label for="email">Email</label>
+              <input type="text" id="new-email" name="email" required>
+  
+              <label for="mobile">Mobile Number</label>
+              <input type="text" id="new-phone" name="mobile" required>
+  
+              <label for="std">Which Standard are you currently enrolled in?(in number)</label>
+              <select id="std" name="std" required>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+  
+              <label for="dob">Date of birth </label>
+                        <input type="date" id="dob" name="dob" required>
+  
+              <label for="state">Which State / Union Territory are you from?</label>
+                      <select id="state" name="state" required>
+                          <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                          <option value="Andhra Pradesh">Andhra Pradesh</option>
+                          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                          <option value="Assam">Assam</option>
+                          <option value="Bihar">Bihar</option>
+                          <option value="Chandigarh">Chandigarh</option>
+                          <option value="Chhattisgarh">Chhattisgarh</option>
+                          <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                          <option value="Daman and Diu">Daman and Diu</option>
+                          <option value="Delhi">Delhi</option>
+                          <option value="Goa">Goa</option>
+                          <option value="Gujarat">Gujarat</option>
+                          <option value="Haryana">Haryana</option>
+                          <option value="Himachal Pradesh">Himachal Pradesh</option>
+                          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                          <option value="Jharkhand">Jharkhand</option>
+                          <option value="Karnataka">Karnataka</option>
+                          <option value="Kerala">Kerala</option>
+                          <option value="Ladakh">Ladakh</option>
+                          <option value="Lakshadweep">Lakshadweep</option>
+                          <option value="Madhya Pradesh">Madhya Pradesh</option>
+                          <option value="Maharashtra">Maharashtra</option>
+                          <option value="Manipur">Manipur</option>
+                          <option value="Meghalaya">Meghalaya</option>
+                          <option value="Mizoram">Mizoram</option>
+                          <option value="Nagaland">Nagaland</option>
+                          <option value="Odisha">Odisha</option>
+                          <option value="Puducherry">Puducherry</option>
+                          <option value="Punjab">Punjab</option>
+                          <option value="Rajasthan">Rajasthan</option>
+                          <option value="Sikkim">Sikkim</option>
+                          <option value="Tamil Nadu">Tamil Nadu</option>
+                          <option value="Telangana">Telangana</option>
+                          <option value="Tripura">Tripura</option>
+                          <option value="Uttar Pradesh">Uttar Pradesh</option>
+                          <option value="Uttarakhand">Uttarakhand</option>
+                          <option value="West Bengal">West Bengal</option>
+                      </select>
+  
+              
+              <label for="username">Username</label>
+              <input type="text" id="new-username" name="username" required>        
+  
+              <label for="password">Password</label>
+              <input type="password" id="new-password" name="password" required>
+  
+              <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="http://localhost:3000/login" id="login-link">Login</a></p>
+          </div>
+        </div>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+    
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: black ;
+      }
+    
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+      }
+    
+      .form1-container, .form2-container {
+        width: 900px;
+        margin: 0 auto;
+        padding: 50px;
+        background-color: #f8fafa;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        color: #100f0f;
+      }
+    
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 50px;
+        color: black;
+      }
+    
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      label {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+    
+      input, select {
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        background-color: #adafaf;
+      }
+    
+      button {
+        padding: 10px;
+        background-color: black;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.2s ease-in-out;
+      }
+    
+      button:hover {
+        background-color: #3a4250;
+      }
+    
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        transition: color 0.2s ease-in-out;
+      }
+    
+      a:hover {
+        color: black;
+      }
+    
+      p {
+        text-align: center;
+        margin: 8px;
+      }
+    
+      #indianStates {
+        padding : 9px 7px 9px 7px;
+        font-size: larger;
+      }
+      option{
+        display: flex;
+        justify-content: space-around;
+        padding-left: 5px;
+      }
+</style>
+</body>
+</html>

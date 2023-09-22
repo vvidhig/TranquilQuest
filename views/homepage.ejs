@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <%- include('header.ejs') %>
+  <br><br><br><br><br><br>
+  <%- include('../partials/flash.ejs') %>
+<h2><i>   “Your mental health is everything — prioritize it. Make the time like your life depends on it, because it does.” — Mel Robbins</i></h2>
+<br><br><br>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="container bootstrap snippets bootdey">
+    <div class="row">
+
+        <div class="col-md-3 col-sm-6 col-xs-12"> <a href="/">
+            <div class="panel panel-dark panel-colorful">
+                <div class="panel-body text-center">
+                	<p class="text-uppercase mar-btm text-sm">Click Here to</p>
+                	<hr>
+                	<p class="h2 text-thin">Access the Questionnaire</p>
+                	<small><span class="text-semibold"></span> </small>
+                </div>
+            </div></a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12"><a href="/">
+        	<div class="panel panel-danger panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text-sm">Click Here to</p>
+        			<hr>
+        			<p class="h2 text-thin">Access the Chatbot</p>
+        			<small><span class="text-semibold"></span> </small>
+        		</div>
+        	</div></a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12"><a href="http://localhost:3000/analyze">
+        	<div class="panel panel-primary panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text-sm">Click Here to</p>
+        			<hr>
+        			<p class="h2 text-thin">Try Emotion Recognition</p>
+        			<small><span class="text-semibold"></i></span></small>
+        		</div>
+        	</div></a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12"><a href="http://localhost:3000/dailytasks">
+        	<div class="panel panel-info panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text-sm">Click Here to</p>
+        			<hr>
+        			<p class="h2 text-thin">Get Access to your Daily Task</p>
+        			<small><span class="text-semibold"></span></small>
+        		</div>
+        	</div></a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12"> <a href="/">
+            <div class="panel panel-darkeu panel-colorful">
+                <div class="panel-body text-center">
+                	<p class="text-uppercase mar-btm text-sm">Click Here to</p>
+                	<hr>
+                	<p class="h2 text-thin">Access the <br>User Mood Tracker </p>
+                	<small><span class="text-semibold"></span> </small>
+                </div>
+            </div></a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12"><a href="/">
+        	<div class="panel panel-dangerie panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text-sm">Click Here to</p>
+        			<hr>
+        			<p class="h2 text-thin">Read Articles about Mental Health Issues</p>
+        			<small><span class="text-semibold"></span> </small>
+        		</div>
+        	</div></a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12"><a href="/">
+        	<div class="panel panel-primaryss panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text-sm">Click Here to</p>
+        			<hr>
+        			<p class="h2 text-thin">For Personalized Resource Recommendations</p>
+        			<small><span class="text-semibold"></i></span></small>
+        		</div>
+        	</div></a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12"><a href="/">
+        	<div class="panel panel-infoie panel-colorful">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text-sm">Click Here to</p>
+        			<hr>
+        			<p class="h2 text-thin">Share your views and leave a testimonial</p>
+        			<small><span class="text-semibold"></span></small>
+        		</div>
+        	</div></a>
+        </div>
+
+	</div>
+</div>
+<br><br><br>
+<%- include('footer.ejs') %>
+</body>
+<style>
+    body{
+        background:#eee;
+        margin-top:20px;
+    }
+    
+    .panel {
+      box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+      border-radius: 0;
+      border: 0;
+      margin-bottom: 24px;
+    }
+    
+    .panel-dark.panel-colorful {
+      background-color: #5f0f40;
+      border-color: #5f0f40;
+      color: #fff;
+    }
+
+    .panel-darkeu.panel-colorful {
+        background-color: #662a4f;
+        border-color: #662a4f;
+        color: #fff;
+      }
+    
+    .panel-danger.panel-colorful {
+      background-color: #fb8b24;
+      border-color: #fb8b24;
+      color: #fff;
+    }
+
+    .panel-dangerie.panel-colorful {
+        background-color: #ed9e55;
+        border-color: #ed9e55;
+        color: #fff;
+      }
+    
+    .panel-primary.panel-colorful {
+      background-color: #81761f;
+      border-color: #81761f;
+      color: #fff;
+    }
+
+    .panel-primaryss.panel-colorful {
+        background-color: #8f8853;
+        border-color: #8f8853;
+        color: #fff;
+      }
+    
+    .panel-info.panel-colorful {
+      background-color: #0f4c5c;
+      border-color: #0f4c5c;
+      color: #fff;
+    }
+
+    .panel-infoie.panel-colorful {
+        background-color: #3d6a76;
+        border-color: #3d6a76;
+        color: #fff;
+      }
+    
+    .panel-body {
+      padding: 25px 20px;
+    }
+    
+    .panel hr {
+      border-color: rgba(0,0,0,0.1);
+    }
+    
+    .mar-btm {
+      margin-bottom: 15px;
+    }
+    
+    h2, .h2 {
+      font-size: 28px;
+    }
+    
+    .small, small {
+      font-size: 85%;
+    }
+    
+    .text-sm {
+      font-size: .9em;
+    }
+    .text-thin {
+        font-weight: 300;
+      }
+      
+      .text-semibold {
+        font-weight: 600;
+      }
+</style>
+</html>

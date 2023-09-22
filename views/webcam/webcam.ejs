@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Data Capture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Tap the screen to take a snapshot</h2>
+    <div class="container">
+        <div class="leftPanel">
+            <video autoplay></video>
+        </div>
+        <div class="rightPanel">
+            <canvas>
+                Hopefully, you don't see this message. If you do, please update your browser.
+            </canvas>
+        </div>
+    </div>
+    <button id="captureButton">Capture and Analyze</button>
+    
+    <form id="captureForm" method="POST" action="/analyze">
+        <input type="hidden" name="cameraData" id="cameraDataInput">
+    </form>
+
+    <script defer>
+        const video = document.querySelector('video');
+        const canvas = document.querySelector('canvas');
+        const c = canvas.getContext('2d');
+        const captureButton = document.getElementById('captureButton');
+        const captureForm = document.getElementById('captureForm');
+        const cameraDataInput = document.getElementById('cameraDataInput');
+        
+        async function startWebCam(){
+            try{
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    video: true
+                })
+                video.srcObject = stream;
+            }catch(err){
+                console.log(err);
+            }
+        }
+        startWebCam();
+        window.addEventListener('click',() => {
+            c.drawImage(video,0,0,canvas.width,canvas.height);
+        });
+
+        captureButton.addEventListener('click', () => {
+            // Capture a frame from the video feed
+            c.drawImage(video, 0, 0, canvas.width, canvas.height);
+    
+            // Convert the captured frame to a data URL
+            const imageData = canvas.toDataURL('image/jpeg');
+    
+            // Set the captured data in the hidden input field
+            cameraDataInput.value = imageData;
+    
+            // Submit the form to the server
+            captureForm.submit();
+        });
+    </script>
+</body>
+</html>
